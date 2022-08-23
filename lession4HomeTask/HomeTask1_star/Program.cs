@@ -10,9 +10,14 @@ void readData()
     Console.WriteLine("Введите вырожение в формате A,действие,B, пример 4,*,6");
     inputLine = Console.ReadLine();
 
-    inputLineA = int.Parse(inputLine.Substring(0,inputLine.IndexOf(",")));
-    inputLineFn = inputLine.Substring(inputLine.IndexOf(",")+1).Substring(0,inputLine.Substring(inputLine.IndexOf(",")+1).IndexOf(","));
-    inputLineB = int.Parse(inputLine.Substring(inputLine.IndexOf(",")+1).Substring(inputLine.Substring(inputLine.IndexOf(",")+1).IndexOf(",") + 1));
+    // inputLineA = int.Parse(inputLine.Substring(0,inputLine.IndexOf(",")));
+    // inputLineFn = inputLine.Substring(inputLine.IndexOf(",")+1).Substring(0,inputLine.Substring(inputLine.IndexOf(",")+1).IndexOf(","));
+    // inputLineB = int.Parse(inputLine.Substring(inputLine.IndexOf(",")+1).Substring(inputLine.Substring(inputLine.IndexOf(",")+1).IndexOf(",") + 1));
+
+    string[] subs = inputLine.Split(' ',',');
+    inputLineA = int.Parse(subs[0]);
+    inputLineFn = subs[1];
+    inputLineB = int.Parse(subs[2]);
 
 }
 
