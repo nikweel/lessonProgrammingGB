@@ -7,7 +7,7 @@ double calc = 0;
 
 void readData()
 {
-    Console.WriteLine("Введите вырожение в формате A,действие,B, пример 4,*,6");
+    Console.WriteLine("Введите выражение в формате A,действие,B, пример 4,*,6");
     inputLine = Console.ReadLine();
 
     // inputLineA = int.Parse(inputLine.Substring(0,inputLine.IndexOf(",")));
