@@ -24,7 +24,7 @@ void readData()
 string ColculateTask()
 {
     x = (b2 - b1) / (k1 - k2);
-    y = k1 * ((b2 - b1) / (k1 - k2)) + b1;
+    y = k1 * x + b1;
 
     return "("+x+";"+y+")";
 }
