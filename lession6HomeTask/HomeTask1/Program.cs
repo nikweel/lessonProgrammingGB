@@ -8,7 +8,6 @@ void readData()
     Console.WriteLine("Введите числа");
     inputLine = Console.ReadLine();
     numbers = inputLine.Split(',');
-    Console.WriteLine(numbers);
 }
 
 //Решение задачи
