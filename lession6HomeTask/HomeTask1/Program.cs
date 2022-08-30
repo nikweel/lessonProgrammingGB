@@ -1,23 +1,29 @@
 ﻿Console.Clear();
-string inputLine;
-string[] numbers;
+string m;
 
 //Метод ввода чисел
-void readData()
+int[] readData()
 {
     Console.WriteLine("Введите числа");
-    inputLine = Console.ReadLine();
-    numbers = inputLine.Split(',');
+    string[] numbersLine;
+    m = Console.ReadLine();
+    numbersLine = m.Split(',');
+    int[] outArray = new int[numbersLine.Length];
+    int i = 0;
+    while(i<numbersLine.Length){
+        outArray[i] = int.Parse(numbersLine[i]);
+        i++;
+    }
+    return outArray;
 }
 
 //Решение задачи
-int ColculateTask(string[] inputArray)
+int ColculateTask(int[] inputArray)
 {
     int sum = 0;
     int i = 0;
     while(i<inputArray.Length){
-
-        if(int.Parse(inputArray[i]) > 0){
+        if(inputArray[i] > 0){
             sum++;
         }
         i++;
@@ -26,7 +32,12 @@ int ColculateTask(string[] inputArray)
     return sum;
 }
 
+void PrintResult(int countTask){
+    Console.Write(countTask);
+}
 
-readData();
-Console.Write(ColculateTask(numbers));
+int[] bufferArray = readData();
+int countTask = ColculateTask(bufferArray);
+PrintResult(countTask);
+
 
