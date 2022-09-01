@@ -39,7 +39,7 @@ void PrintTeoDimArray(int[,] inputArray){
 string SearchElement(int[,] inputArray, int element){
     int i = 0;
     int j = 0;
-    string answer = "Элемента ("+element+") нет";
+    string answer = "Такого числа в массиве нет";
     while (i < inputArray.GetLength(0))
     {
         j = 0;
@@ -47,7 +47,7 @@ string SearchElement(int[,] inputArray, int element){
         {
 
             if(element == inputArray[i,j]){
-                answer = "Элемент ("+element+") находится на позиции: "+i+" "+j;
+                answer = "Число ("+element+") находится на позиции: "+i+" "+j;
                 break;
             }
 
