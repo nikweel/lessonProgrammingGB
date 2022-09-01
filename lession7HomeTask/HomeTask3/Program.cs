@@ -12,7 +12,6 @@ int[,] FillTwoDimArray(int countRow, int countColumn){
             outArray[i,j] = numbersSyntezator.Next(0,100);
             j++;
         }
-
         i++;
     }
     return outArray;
@@ -36,21 +35,18 @@ void PrintTeoDimArray(int[,] inputArray){
 }
 
 
-//Находим среднее арифмтическое
+//Находим среднее арифмтическое столбцов двумерного массива
 double[] CalcTeoDimArray(int[,] inputArray){
     int i = 0;
     int j = 0;
     int k = 0;
     double[] outArray = new double[inputArray.GetLength(1)];
-
     while (i < inputArray.GetLength(0))
     {
         j = 0;
         while (j < inputArray.GetLength(1))
         {
-
             outArray[j] += inputArray[i,j];
-
             j++;
         }
 
@@ -62,15 +58,11 @@ double[] CalcTeoDimArray(int[,] inputArray){
         outArray[k] = outArray[k] / i;
         k++;
     }
-
-
-
     return outArray;
-    
 }
 
 
-//Метод печати двумерного массива
+//Метод печати массива double
 void PrintTeoDimArrayD(double[] inputArray){
     int i = 0;
     while (i < inputArray.Length)
